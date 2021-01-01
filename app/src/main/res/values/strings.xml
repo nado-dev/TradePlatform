@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">商易通</string>
+    <string name="splash_decription">splashPic</string>
+    <string name="login_by_phone_num">手机号登陆</string>
+    <string name="exprience_now">立即体验</string>
+    <string name="agreement">同意《用户协议》和《隐私政策》</string>
+    <string name="tip_for_unresignature">未注册手机号登录后将自动创建账号</string>
+    <string name="next_step">下一步</string>
+    <string name="veri_code_sent">验证码已经发送至</string>
+    <string name="cn_phone_prefix">+86</string>
+    <string name="input_phone_num">输入手机号</string>
+    <string name="login_or_sign_up">登录或注册</string>
+    <string name="todo">todo</string>
+    <string name="tv_save_to_local">保存到本地</string>
+    <string name="take_a_scan">扫一扫</string>
+    <string name="reuqest_permission">为保证应用正常运行, 请打开相关权限</string>
+    <string name="back">back</string>
+    <string name="base_info">基本信息</string>
+    <string name="item_name">商品名称</string>
+    <string name="loading">上传中</string>
+    <string name="sub_app_name">大宗商品供需匹配平台</string>
+</resources>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:gravity="center_vertical"
+        android:animateLayoutChanges="true"
+        android:padding="5dp"
+        android:background="@color/light_blue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="欢迎您"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.516" />
+
+        <TextView
+            android:id="@+id/f1_user_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="userType"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.516" />
+
+        <ImageView
+            android:id="@+id/f1_message"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:src="@drawable/message"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/light_blue"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/bt_scan"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/qrcode" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="二维码" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/bt_invoke_me"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/about_me" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我参与的" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:id="@+id/f1_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/bt_add"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="添加"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/light_blue"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/bt_about_me"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/person_info" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关于我" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/f1_find"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/bt_find_chances"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/search_for" />
+
+                <TextView
+                    android:id="@+id/f1_find_text"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发现机会" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/bt_feedback"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/feed_back" />
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="反馈" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:id="@+id/layout_invoke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我参与的"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_num_invoking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="***"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_finish"
+            android:padding="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已完成的"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:text="***"
+                android:id="@+id/tv_num_invoked"
+                android:textSize="28sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预期中介收入"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_num_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="***"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/f1_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+        <LinearLayout
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/banner_pointer"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <TextView
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:textColor="@color/pure_black"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="公告"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <LinearLayout
+        android:id="@+id/fragment_one_loading"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="14dp">
+        <!--分页加载-->
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/foot_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载中..."
+            android:layout_marginStart="15dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+       </LinearLayout>
+   </ScrollView>
+</LinearLayout>

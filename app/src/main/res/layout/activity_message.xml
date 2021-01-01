@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/light_blue"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:fitsSystemWindows="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/msg_detail_back"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/back"
+            android:textColor="#FFF"
+            android:contentDescription="@string/todo" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="5"
+            android:text="Share"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#FFF"/>
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/msg_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/message_nav_menu" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/msg_nav_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

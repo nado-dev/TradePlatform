@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.page.about.AboutActivity"
+    android:orientation="vertical">
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="20dp"-->
+    <!--        android:background="@color/light_blue"/>-->
+    <LinearLayout
+        android:background="@color/light_blue"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:fitsSystemWindows="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/setting_back"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/back"
+            android:textColor="#FFF"
+            android:contentDescription="TODO" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="5"
+            android:text="关于"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#FFF"/>
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFF">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/kefu" />
+        <TextView
+            android:paddingStart="10dp"
+            android:textColor="#000"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="运维名称"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="芜湖运营团队" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+
+        android:id="@+id/setting_support"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFF">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/ops" />
+        <TextView
+            android:paddingStart="10dp"
+            android:textColor="#000"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="运维编号"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="20200731" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFF">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/location" />
+        <TextView
+            android:paddingStart="10dp"
+            android:textColor="#000"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="公司地址"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="成都市建设北路二段四号" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFF">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/phone" />
+        <TextView
+            android:paddingStart="10dp"
+            android:textColor="#000"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="联系方式"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="QQ群：1135537135" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFF">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/ops" />
+        <TextView
+            android:paddingStart="10dp"
+            android:textColor="#000"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="版本"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="V1.1.1" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="© Trade System\n Power by 733"/>
+</LinearLayout>

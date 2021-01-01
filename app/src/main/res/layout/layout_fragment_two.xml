@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/light_blue"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:fitsSystemWindows="true"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textColor="#FFF" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="5"
+            android:text="我的"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#FFF"/>
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/default_touxiang" />
+
+            <TextView
+                android:id="@+id/fragment3_username"
+                android:textColor="@color/pure_black"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:id="@+id/fragment3_message"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FFF">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/message_blue"/>
+                <TextView
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="#000"
+                    android:layout_weight="6"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="消息"/>
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/jingru"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:id="@+id/fragment3_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FFF">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/holder"/>
+                <TextView
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="#000"
+                    android:layout_weight="6"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="个人信息"/>
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/jingru"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:id="@+id/fragment3_invoke"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FFF">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/house"/>
+                <TextView
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="#000"
+                    android:layout_weight="6"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="我参与的"/>
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/jingru"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:id="@+id/fragment3_feed_back"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FFF">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/danju2"/>
+                <TextView
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="#000"
+                    android:layout_weight="6"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="反馈"/>
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/jingru"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:id="@+id/fragment3_setting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FFF">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/setting" />
+                <TextView
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="#000"
+                    android:layout_weight="6"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="设置"/>
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/jingru"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/fragment3_logout"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="#FFF"
+                android:layout_marginTop="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="退出"
+                android:background="@color/light_blue"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

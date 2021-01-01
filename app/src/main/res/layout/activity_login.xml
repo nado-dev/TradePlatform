@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.commodity.mylibrary.view.SpreadView
+            android:id="@+id/spreadView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:spread_center_color="@color/blue"
+            app:spread_delay_milliseconds="150"
+            app:spread_distance="1"
+            app:spread_max_radius="90"
+            app:spread_radius="100"
+            app:spread_spread_color="@color/white" />
+
+        <com.commodity.mylibrary.view.CircleImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:src="@drawable/main_pic" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/login_phone"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_mobile_loggin"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/login_by_phone_num"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_experience" />
+
+    <TextView
+        android:id="@+id/login_experience"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_home_experience"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="注册"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/login_phone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/login_phone"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <CheckBox
+        android:id="@+id/login_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_rule"
+        android:layout_alignBottom="@+id/tv_rule"
+        android:layout_margin="1dp"
+        android:layout_marginStart="32dp"
+        android:layout_toStartOf="@+id/tv_rule"
+        android:buttonTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_rule"
+        app:layout_constraintEnd_toStartOf="@+id/tv_rule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_rule" />
+
+    <TextView
+        android:id="@+id/tv_rule"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:text="@string/agreement"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/login_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/login_phone" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login_phone"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_splash_shape"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/login_experience"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="@+id/login_experience"
+        app:layout_constraintTop_toBottomOf="@+id/button_register" />
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="96dp"
+        android:background="@drawable/btn_splash_shape"
+        android:gravity="center"
+        android:text="注册"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

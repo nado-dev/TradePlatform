@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.page.register.RegisterActivity">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_tab_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_left_arrow_black" />
+
+            <TextView
+                android:id="@+id/tv_login_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="19sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment"
+            android:name="com.commodity.trade.ui.page.register.ChooseIdentityFragment"
+            android:layout_width="match_parent"
+            android:layout_height="680dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

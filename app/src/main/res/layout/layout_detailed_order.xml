@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/btn_splash_shape_1"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#FFF">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="编号"
+            android:textColor="@color/pure_black"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/order_item_share_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#FFF"
+            android:gravity="start|center_vertical"
+            android:text="xxx"
+            android:textColor="@color/background_dark_gray"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#FFF">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/type"/>
+
+        <TextView
+            android:textSize="16sp"
+            android:paddingStart="10dp"
+            android:textColor="#000"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="参与名称  "/>
+
+        <TextView
+            android:textSize="16sp"
+            android:id="@+id/order_item_name"
+            android:gravity="center"
+            android:layout_weight="6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="xxx" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#FFF">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/status"/>
+        <TextView
+            android:textSize="16sp"
+            android:paddingStart="10dp"
+            android:textColor="#000"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="当前状态"/>
+        <TextView
+            android:textSize="16sp"
+            android:id="@+id/order_item_status"
+            android:gravity="center"
+            android:layout_weight="6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="xxx" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

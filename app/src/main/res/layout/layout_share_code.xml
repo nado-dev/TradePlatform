@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="3dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:background="@drawable/btn_splash_shape"
+    android:layout_width="200dp"
+    android:layout_height="100dp">
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:id="@+id/tv_share_code"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_copy"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_share"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/copy" />
+
+    <ImageView
+        android:id="@+id/iv_share"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_copy"
+        android:src="@drawable/share_1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

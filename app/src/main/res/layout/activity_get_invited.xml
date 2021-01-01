@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.page.invite.QrCodePostActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:background="@color/light_blue"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:fitsSystemWindows="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/order_input_back"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/back"
+            android:textColor="#FFF"
+            android:contentDescription="@string/todo" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="5"
+            android:text="邀请"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#FFF"/>
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginStart="20dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="请填写商品分享码"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.commodity.mylibrary.view.InviteCodeView
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/captcha_view"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="100dp" />
+</LinearLayout>
