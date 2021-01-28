@@ -136,7 +136,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp" />
 
-        <com.commodity.mylibrary.view.CaptchaView
+        <com.commodity.mylibrary.view.InviteCodeView
             android:id="@+id/captcha_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

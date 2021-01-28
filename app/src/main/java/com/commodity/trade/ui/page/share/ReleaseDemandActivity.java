@@ -71,8 +71,6 @@ public class ReleaseDemandActivity extends AppCompatActivity {
     Button orderSubmit;
     @BindView(R.id.order_invite_code)
     TextView orderInviteCode;
-    @BindView(R.id.order_go_detail)
-    Button orderGoDetail;
     @BindView(R.id.order_setter)
     ScrollView orderSetter;
     @BindView(R.id.order_show_success)
@@ -121,7 +119,7 @@ public class ReleaseDemandActivity extends AppCompatActivity {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
 
-    @OnClick({R.id.repaire_back, R.id.order_document, R.id.order_submit, R.id.order_go_detail})
+    @OnClick({R.id.repaire_back, R.id.order_document, R.id.order_submit})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.repaire_back:
@@ -133,8 +131,6 @@ public class ReleaseDemandActivity extends AppCompatActivity {
             case R.id.order_submit:
                 submitInfo();
                 break;
-            case R.id.order_go_detail:
-                goDetail();
             default:
         }
     }
@@ -252,7 +248,6 @@ public class ReleaseDemandActivity extends AppCompatActivity {
                     // test TODO
                     docUrl = "";
                     updateOrderTable();
-
                 }
             }
         });
@@ -277,7 +272,6 @@ public class ReleaseDemandActivity extends AppCompatActivity {
                     Log.d("Bmob", "插入成功");
                     // 上传Neo4j
                     updateNeo4j();
-                    shortToast("更新成功");
                 } else {
                     Log.d("Bmob", "更新失败" + e.getMessage());
                 }
@@ -298,16 +292,20 @@ public class ReleaseDemandActivity extends AppCompatActivity {
         shareMessageBox.setShareId(shareId);
         shareMessageBox.setShareFrom(shareInviteCode);
         shareMessageBox.setShareTo(newComer);
-        shareMessageBox.update(new UpdateListener() {
+        shareMessageBox.save(new SaveListener <String>() {
             @Override
-            public void done(BmobException e) {
+            public void done(String s, BmobException e) {
                 if ( null == e) {
                     loadingDialog.dismiss();
                     orderSetter.setVisibility(View.GONE);
                     orderShowSuccess.setVisibility(View.VISIBLE);
-                    String s = "您的邀请码是"+newInviteCode;
-                    orderInviteCode.setText(s);
+                    String s1 = "您的邀请码是"+newInviteCode;
+                    orderInviteCode.setText(s1);
                     Toast.makeText(ReleaseDemandActivity.this, "参与成功，交易达成，请尽快联系买方，按照承诺完成交易", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    loadingDialog.dismiss();
+                    e.printStackTrace();
                 }
             }
         });

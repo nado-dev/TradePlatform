@@ -16,14 +16,9 @@ import retrofit2.http.Query;
 
 public interface ApiService {
 
-    String BASE_URL = "http://62.234.57.125:3000/";
+    String TEST_MY_PC = "http://47.99.102.5:8080/";
     String TEST_LOCALHOST_8080 = "http://localhost:8080/";
-    String TEST_MY_PC = "http://192.168.1.111:8080/";
-
-//    @GET("login/cellphone")
-//    Observable <TestBean> login(@Query("phone") String phone, @Query("password") String password);
-
-
+//    String TEST_MY_PC = "http://192.168.1.111:8080/";
     @GET("invite/test")
     Observable<TestBean> testApi();
 
@@ -92,5 +87,4 @@ public interface ApiService {
 
     @GET("share/status")
     Observable<ShareBeforeAfterBean> findBeforeAfter(@Query("share_id") String shareId, @Query("uid") String uid);
-
 }

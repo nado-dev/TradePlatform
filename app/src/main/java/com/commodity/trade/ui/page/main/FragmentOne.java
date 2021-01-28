@@ -188,7 +188,7 @@ public class FragmentOne extends Fragment implements ToFragmentListener {
         if (userType == UserConfig.USER_TYPE_SELLER) {
             context.startActivity(new Intent(context, ShareQrCodeActivity.class));
         }
-        if (userType == UserConfig.USER_TYPE_MIDDLE) {
+        else {
             DialogLibrary dialogLibrary = new DialogLibrary(context);
             dialogLibrary.bottomDialog("打开邀请二维码", "扫描商品二维码", new IDialog.OnBottomDialogClick() {
                 @Override

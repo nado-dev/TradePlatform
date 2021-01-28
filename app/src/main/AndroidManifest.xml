@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.commodity.trade">
+    <!-- 允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 获取sd卡写的权限，用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许读取手机状态 用于创建BmobInstallation -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".MyApplication"
+        android:icon="@drawable/main_pic"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/main_pic"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="q">
+        <activity android:name=".ui.page.message.MessageActivity" />
+        <activity android:name=".ui.page.find_chances.GetAllShareCodeActivity" />
+        <activity android:name=".ui.page.find_chances.FindChancesActivity" />
+        <activity android:name=".ui.page.person_info.PersonInfoActivity" />
+        <activity android:name=".ui.page.share.ShareQrItemActivity" />
+        <activity android:name=".ui.page.announce.DetailedAnnounceActivity" />
+        <activity android:name=".ui.page.share.DetailedOrderActivity" />
+        <activity android:name=".ui.page.share.GetInvitedActivity" />
+        <activity android:name=".ui.page.share.ShareQrCodeActivity" />
+        <activity android:name=".ui.page.share.DetailedItemActivity" />
+        <activity android:name=".ui.page.about.AboutActivity" />
+        <activity android:name=".ui.page.feedback.FeedbackActivity" />
+        <activity android:name=".ui.page.share.ReleaseDemandActivity" />
+        <activity android:name=".ui.page.login.NormalLoginActivity" />
+        <activity android:name=".ui.page.login.NormalRegisterActivity" />
+        <activity android:name=".ui.page.invite.QrCodePostActivity" />
+        <activity android:name=".ui.page.register.RegisterActivity" />
+        <activity android:name=".ui.page.login.PhoneLoginActivity" />
+        <activity android:name=".ui.page.login.LoginActivity" />
+        <activity android:name=".ui.page.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+
+        <provider
+            android:name="cn.bmob.v3.util.BmobContentProvider"
+            android:authorities="com.commodity.trade.BmobContentProvider"
+            android:exported="false" />
+    </application>
+
+</manifest>

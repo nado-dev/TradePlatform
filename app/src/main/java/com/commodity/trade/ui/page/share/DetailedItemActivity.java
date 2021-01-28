@@ -54,8 +54,7 @@ public class DetailedItemActivity extends AppCompatActivity {
     ImageView orderDetailShare;
     @BindView(R.id.order_invite_code)
     TextView orderInviteCode;
-    @BindView(R.id.order_go_detail)
-    Button orderGoDetail;
+
     @BindView(R.id.order_show_success)
     LinearLayout orderShowSuccess;
     @BindView(R.id.order_detail_curr_status)

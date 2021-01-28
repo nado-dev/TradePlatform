@@ -90,6 +90,9 @@ public class ShareMessageFragment extends Fragment {
                         Toast.LENGTH_SHORT).show();
             }
         });
+        if (null == currentUser.getObjectId()) {
+            return;
+        }
         request.getListByUid(currentUser.getObjectId());
 
     }

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView android:background="@android:color/holo_blue_light"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_light">
@@ -35,6 +38,7 @@
 
 
     <TextView
+        android:textStyle="bold"
         android:id="@+id/login_phone"
         android:layout_width="320dp"
         android:layout_height="45dp"
@@ -66,7 +70,7 @@
         android:gravity="center"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:text="注册"
+        android:text="用户名密码注册"
         android:textColor="@android:color/white"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@+id/login_phone"
@@ -113,12 +117,13 @@
         android:layout_above="@+id/login_phone"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="116dp"
         android:background="@drawable/btn_splash_shape"
         android:gravity="center"
-        android:text="登录"
+        android:text="用户名密码登录"
         android:textColor="@android:color/white"
         android:textSize="12sp"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/login_experience"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="@+id/login_experience"
@@ -137,9 +142,11 @@
         android:text="注册"
         android:textColor="@android:color/white"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

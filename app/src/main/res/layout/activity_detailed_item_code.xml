@@ -44,10 +44,12 @@
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageView
-            android:src="@drawable/success"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:src="@drawable/success" />
+
         <TextView
             android:textSize="@dimen/activity_horizontal_margin"
             android:layout_marginTop="20dp"
@@ -61,16 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="您的邀请码是"/>
-        <Button
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:id="@+id/order_go_detail"
-            android:textColor="#FFF"
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="查看详情"
-            android:background="@color/light_blue"/>
+
     </LinearLayout>
     <ScrollView
         android:id="@+id/order_setter"

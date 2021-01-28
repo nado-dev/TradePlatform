@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_class">
+        <item>卖家</item>
+        <item>中间人</item>
+        <item>买家</item>
+    </string-array>
+</resources>

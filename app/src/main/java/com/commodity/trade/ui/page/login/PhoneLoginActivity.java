@@ -14,24 +14,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.commodity.mylibrary.util.ValidateUtil;
 import com.commodity.mylibrary.view.CaptchaView;
+import com.commodity.mylibrary.view.InviteCodeView;
 import com.commodity.mylibrary.weight.MyDialog;
 import com.commodity.trade.MainActivity;
 import com.commodity.trade.R;
 import com.commodity.trade.entity.user.User;
 import com.commodity.trade.ui.page.register.RegisterActivity;
+import com.commodity.trade.util.Config;
 import com.google.android.material.textfield.TextInputEditText;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.bmob.v3.BmobSMS;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FetchUserInfoListener;
 import cn.bmob.v3.listener.LogInListener;
+import cn.bmob.v3.listener.QueryListener;
 
 /**
  * @author Aaron
  */
-public class PhoneLoginActivity extends AppCompatActivity {
+public class  PhoneLoginActivity extends AppCompatActivity {
 
     public static final int STATUS_INPUTTING_PHONE_NUM = 0;
     public static final int STATUS_INPUTTING_VERIFY_CODE = 1;
@@ -56,7 +61,7 @@ public class PhoneLoginActivity extends AppCompatActivity {
     };
 
     @BindView(R.id.captcha_view)
-    CaptchaView captchaView;
+    InviteCodeView captchaView;
     @BindView(R.id.img_tab_back)
     ImageView imgTabBack;
     @BindView(R.id.tv_login_title)
@@ -97,28 +102,31 @@ public class PhoneLoginActivity extends AppCompatActivity {
     }
 
     private void validateCode(String code) {
-        // 登录成功
-        // Bmob 验证
-
         BmobUser.signOrLoginByMobilePhone(phoneNum, code, new LogInListener <BmobUser>() {
             @Override
             public void done(BmobUser bmobUser, BmobException e) {
                 if (e == null) {
-                    shortToast("短信注册或登录成功：" + bmobUser.getUsername());
-                    User currentUser = BmobUser.getCurrentUser(User.class);
-                    if (currentUser.invitorCode == null || "".equals(currentUser.invitorCode)) {
-                        makeDialogToGetInvited();
-                    }
-                    else {
-                        startActivity(new Intent(PhoneLoginActivity.this, MainActivity.class));
-                    }
-                } else {
+                    BmobUser.fetchUserInfo(new FetchUserInfoListener <BmobUser>() {
+                        @Override
+                        public void done(BmobUser bmobUser, BmobException e) {
+                            if(e == null) {
+                                shortToast("短信注册或登录成功：" + bmobUser.getUsername());
+                                User currentUser = BmobUser.getCurrentUser(User.class);
+                                if (currentUser.invitorCode == null || "".equals(currentUser.invitorCode)) {
+                                    makeDialogToGetInvited();
+                                }
+                                else {
+                                    startActivity(new Intent(PhoneLoginActivity.this, MainActivity.class));
+                                }
+                            }
+                        }
+                    });
+                }
+                else {
                     shortToast("短信注册或登录失败：" + e.getErrorCode() + "-" + e.getMessage());
                 }
             }
         });
-
-
     }
 
     private void makeDialogToGetInvited() {
@@ -173,31 +181,34 @@ public class PhoneLoginActivity extends AppCompatActivity {
      */
     private void doWithBtnLoginPhone() {
         boolean isLegalInput = checkPhoneNumberInputStatus();
-//        if (isLegalInput) {
-//            // 合法
-//            // goNext Bmob
-//            BmobSMS.requestSMSCode(phoneNum, Config.BMOB_SMS_TEMPLATE, new QueryListener <Integer>() {
-//                @Override
-//                public void done(Integer integer, BmobException e) {
-//                    if (e == null) {
-//                        Toast.makeText(PhoneLoginActivity.this, "验证短信发送成功", Toast.LENGTH_SHORT).show();
-//                    }
-//                    else {
-//                        Log.e("SMS_BMOB","发送验证码失败：" + e.getErrorCode() + "-" + e.getMessage() + "\n");
-//                        Toast.makeText(PhoneLoginActivity.this, "发送验证码失败", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//            });
-//            changeInputStatus(STATUS_INPUTTING_PHONE_NUM, STATUS_INPUTTING_VERIFY_CODE);
-//        } else {
-//            Toast.makeText(this, "请输入正确格式的手机号", Toast.LENGTH_SHORT).show();
-//        }
-        shortToast("验证短信发送成功");
-        timer.start();
+        if (isLegalInput) {
+            // 合法
+            // goNext Bmob
+            BmobSMS.requestSMSCode(phoneNum, Config.BMOB_SMS_TEMPLATE, new QueryListener <Integer>() {
+                @Override
+                public void done(Integer integer, BmobException e) {
+                    if (e == null) {
+                        Toast.makeText(PhoneLoginActivity.this, "验证短信发送成功", Toast.LENGTH_SHORT).show();
+                        timer.start();
+                        changeInputStatus(STATUS_INPUTTING_VERIFY_CODE);
+                        tvCapchaTitle.setText(String.format("验证码已发送至%s", phoneNum));
+                    }
+                    else {
+                        Log.e("SMS_BMOB","发送验证码失败：" + e.getErrorCode() + "-" + e.getMessage() + "\n");
+                        Toast.makeText(PhoneLoginActivity.this, "发送验证码失败", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
 
-        changeInputStatus(STATUS_INPUTTING_VERIFY_CODE);
+        } else {
+            Toast.makeText(this, "请输入正确格式的手机号", Toast.LENGTH_SHORT).show();
+        }
 
-        tvCapchaTitle.setText(String.format("验证码已发送至%s", phoneNum));
+
+//        shortToast("验证短信发送成功");
+//        timer.start();
+//        changeInputStatus(STATUS_INPUTTING_VERIFY_CODE);
+//        tvCapchaTitle.setText(String.format("验证码已发送至%s", phoneNum));
     }
 
     /**

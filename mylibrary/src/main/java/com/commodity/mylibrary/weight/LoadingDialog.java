@@ -77,10 +77,11 @@ public class LoadingDialog extends Dialog {
 
     @Override
     public boolean onKeyDown(int keyCode, @NonNull KeyEvent event) {
-        if(keyCode == KeyEvent.KEYCODE_BACK){
-            // 屏蔽返回键
-            return mCancelable;
-        }
+//        if(keyCode == KeyEvent.KEYCODE_BACK){
+//            // 屏蔽返回键
+//            return mCancelable;
+//        }
+        dismiss();
         return super.onKeyDown(keyCode, event);
     }
 }

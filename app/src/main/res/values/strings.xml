@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">商易通</string>
     <string name="splash_decription">splashPic</string>
-    <string name="login_by_phone_num">手机号登陆</string>
+    <string name="login_by_phone_num">手机号登录/注册（推荐）</string>
     <string name="exprience_now">立即体验</string>
     <string name="agreement">同意《用户协议》和《隐私政策》</string>
     <string name="tip_for_unresignature">未注册手机号登录后将自动创建账号</string>

@@ -61,16 +61,23 @@ public class LoginActivity extends AppCompatActivity {
             case R.id.login_experience:
                 if (checkBoxStatus) {
                     navigateToNormalRegisterActivity();
-                    finish();
                 } else {
                     Toast.makeText(this, "请点击同意《用户协议》和《隐私政策》", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.button:
-                startActivity(new Intent(LoginActivity.this, NormalLoginActivity.class));
+                if (checkBoxStatus) {
+                    startActivity(new Intent(LoginActivity.this, NormalLoginActivity.class));
+                } else {
+                    Toast.makeText(this, "请点击同意《用户协议》和《隐私政策》", Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.button_register:
-                startActivity(new Intent(LoginActivity.this, NormalRegisterActivity.class));
+                if (checkBoxStatus) {
+                    startActivity(new Intent(LoginActivity.this, NormalRegisterActivity.class));
+                } else {
+                    Toast.makeText(this, "请点击同意《用户协议》和《隐私政策》", Toast.LENGTH_SHORT).show();
+                }
                 break;
             default:
         }
